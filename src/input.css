@@ -1,0 +1,4 @@
+@tailwind base; /* lay the foundation */
+@tailwind components; /* workspace for reusable patterns */
+@tailwind utilities; /* magic of tailwind */
+

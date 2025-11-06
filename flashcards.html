@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cards - Flashcards</title>
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-body-bg text-aymane-text font-ay-clean min-h-screen flex flex-col items-center p-6">
+
+
+  <!-- sm  : 640px  small devices and up like tablets -->
+  <!-- md  : 768px  medium devices (small laptops)    -->
+  <!-- lg  : 1024px large screens                     -->
+  <!-- xl  : 1280px extra large                       -->
+  <!-- 2xl : 1536px big displays                      -->
+
+  
+  <aside id="collection-sidebar" class="hidden sm:block w-64 ">
+
+  
+  <header class="mb-8 text-center">
+    <h1 class="text-4xl font-ay-cyber text-aymane-cyan drop-shadow-ay-cyber">Flashcards</h1>
+    <p class="text-aymane-text opacity-80 mt-2">Crée tes collections et apprends efficacement ⚡</p>
+  </header>
+
+  
+  <section id="create-collection" class="w-full max-w-md bg-aymane-gray p-5 rounded-2xl shadow-ay-cyber mb-6">
+    <h2 class="text-xl font-ay-cyber text-aymane-pink mb-3">Nouvelle collection</h2>
+    <div class="flex flex-col space-y-3">
+      <input type="text" id="collection-title" placeholder="Titre de la collection" class="p-2 rounded-md bg-body-bg border border-aymane-violet text-aymane-text focus:outline-none focus:border-aymane-cyan">
+      <button id="create-collection-btn" class="bg-aymane-cyan text-body-bg font-semibold py-2 rounded-md shadow-ay-cyber hover:scale-105 transition">Créer</button>
+    </div>
+  </section>
+
+  
+  <section id="create-card" class="w-full max-w-md bg-aymane-gray p-5 rounded-2xl shadow-ay-pink mb-6">
+    <h2 class="text-xl font-ay-cyber text-aymane-green mb-3">Nouvelle carte</h2>
+    <div class="flex flex-col space-y-3">
+      <select id="collection-select" class="p-2 rounded-md bg-body-bg border border-aymane-violet text-aymane-text focus:outline-none">
+        <option value="">-- Choisir une collection --</option>
+      </select>
+      <input type="text" id="card-question" placeholder="Question" class="p-2 rounded-md bg-body-bg border border-aymane-violet text-aymane-text">
+      <input type="text" id="card-answer" placeholder="Réponse" class="p-2 rounded-md bg-body-bg border border-aymane-violet text-aymane-text">
+      <button id="add-card-btn" class="bg-aymane-green text-body-bg font-semibold py-2 rounded-md shadow-ay-clean hover:scale-105 transition">Ajouter</button>
+    </div>
+  </section>
+
+  
+  <section id="collections" class="w-full max-w-3xl mt-8">
+    <h2 class="text-2xl font-ay-cyber text-aymane-violet mb-4">Mes Collections</h2>
+    <div id="collections-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      
+    </div>
+  </section>
+
+  
+  <section id="cards-display" class="w-full max-w-lg mt-8 hidden">
+    <h3 id="current-collection-title" class="text-center text-2xl font-ay-cyber mb-4"></h3>
+    <div id="flashcard" class="bg-aymane-gray p-6 rounded-2xl shadow-ay-cyber text-center text-lg cursor-pointer transform transition hover:scale-105"></div>
+    <div class="flex justify-between mt-4">
+      <button id="prev-card" class="px-4 py-2 bg-aymane-violet rounded-md">← Précédente</button>
+      <button id="next-card" class="px-4 py-2 bg-aymane-violet rounded-md">Suivante →</button>
+    </div>
+  </section>
+
+  <script src="./src/js/flashcards.js"></script>
+</body>
+</html>

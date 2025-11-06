@@ -1,0 +1,24 @@
+{
+  "name": "flashlearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIRECT0R-ctrl/flashlearn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DIRECT0R-ctrl/flashlearn/issues"
+  },
+  "homepage": "https://github.com/DIRECT0R-ctrl/flashlearn#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.18"
+  }
+}
