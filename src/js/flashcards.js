@@ -49,7 +49,7 @@ createCollectionBtn.addEventListener('click', () =>
 
 
 card.innerHTML = `
-  <h3 class="text-xl font-ay-cyber text-aymane-cyan mb-2">${title} /*or option.value*/</h3>
+  <h3 class="text-xl font-ay-cyber text-aymane-cyan mb-2">${title}</h3>
   <p class="text-sm text-aymane-text/80 shadow-sy-cyber">0 cartes</p>
 `;
  
@@ -61,7 +61,13 @@ collectionList.appendChild(card);
 
 
   collectionTitleInput.value = "";
-});
+
+
+  /* mm heeeeree buddddyyy   */
+  savedCollections();
+
+
+  });
 
 
 addCardBtn.addEventListener('click', () => 
@@ -77,7 +83,7 @@ addCardBtn.addEventListener('click', () =>
   if (!target) return;
 
   target.cards.push({ question, answer });
-
+  savedCollections();
   cardQuestionInput.value = "";
   cardAnswerInput.value = "";
   alert("Carte ajoutée !");
@@ -111,7 +117,7 @@ function renderCard()
 
 
 flashcard.addEventListener('click', () => 
-  {
+{
   showAnswer = !showAnswer;
   renderCard();
 });
@@ -122,7 +128,7 @@ nextCardBtn.addEventListener('click', () =>
   currentCardIndex = (currentCardIndex + 1) % currentCollection.cards.length;
   showAnswer = false;
   renderCard();
-});
+});2
 
 prevCardBtn.addEventListener('click', () => 
   {
@@ -136,8 +142,86 @@ prevCardBtn.addEventListener('click', () =>
 localStorage.setItem('nom', 'aymane');
 console.log(localStorage.getItem('nom'));
 
-function savedCollection() 
+/*function savedCollection()
 {
+  localStorage.setItem('collections', JSON.stringify(collections));
+}*/
+
+function renderCollections() 
+{
+  collectionList.innerHTML = ''; 
+
+  collections.forEach(collection => 
+    {
+    const option = document.createElement('option');
+    option.value = collection.title;
+    option.textContent = collection.title;
+    collectionSelect.appendChild(option);
+
     
+    const card = document.createElement('div');
+    card.className = `
+      bg-aymane-gray border-2 border-aymane-violet
+      rounded-2xl shadow-ay-cyber p-5 w-full cursor-pointer
+      hover:scale-105 hover:border-aymane-cyan transition-all duration-200
+      flex flex-col justify-between
+    `;
+
+    card.innerHTML = `
+      <h3 class="text-xl font-ay-cyber text-aymane-cyan mb-2">${collection.title}</h3>
+      <p class="text-sm text-aymane-text/80 shadow-sy-cyber">${collection.cards.length} cartes</p>
+    `;
+
+    card.addEventListener('click', () => showCollection(collection));
+    collectionList.appendChild(card);
+  });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// savedCollection;
+// loadStorage;
+// window;
+
+function savedCollections()
+{
+  localStorage.setItem('collections', JSON.stringify(collections));
+}
+
+
+
+
+function loadStorage()
+{
+  const stored = localStorage.getItem('collections');
+
+  if(stored)
+  {
+    const parsed =  JSON.parse(stored);
+    collections.push(...parsed);
+    renderCollections();
+  }
+}
+
+
+window.addEventListener('DOMContentLoaded', loadStorage);
+
+
+
+
+
+
 
