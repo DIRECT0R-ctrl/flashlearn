@@ -1,4 +1,4 @@
-// Get HTML elements
+
 localStorage.clear();
 const quizSelect = document.getElementById('quiz-select');
 const startBtn = document.getElementById('start-quiz');
@@ -13,14 +13,14 @@ const scoreText = document.getElementById('score-text');
 const bestScore = document.getElementById('best-score');
 const restartBtn = document.getElementById('restart');
 
-// Load collections from localStorage
+
 let collections = JSON.parse(localStorage.getItem('collections')) || [];
 
 let currentQuiz = null;
 let currentIndex = 0;
 let score = 0;
 
-// Fill quiz select dropdown
+
 collections.forEach(col => {
   const option = document.createElement('option');
   option.value = col.title;
@@ -52,7 +52,7 @@ function showQuestion() {
   feedback.textContent = '';
   answersBox.innerHTML = '';
 
-  // Create answer options
+ 
   const answers = shuffle([
     card.answer,
     ...getRandomAnswers(card.answer)
@@ -109,7 +109,7 @@ restartBtn.addEventListener('click', () => {
   document.getElementById('quiz-selection').classList.remove('hidden');
 });
 
-// Helper functions
+
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
