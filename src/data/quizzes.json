@@ -1,0 +1,108 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the fundamental particle that carries a quantum of light?",
+    "options": ["Photon", "Electron", "Neutron", "Proton"],
+    "answer": "Photon"
+  },
+  {
+    "id": "q2",
+    "question": "According to Heisenberg's Uncertainty Principle, which two quantities cannot both be precisely known?",
+    "options": [
+      "Position and momentum",
+      "Mass and charge",
+      "Energy and time",
+      "Spin and velocity"
+    ],
+    "answer": "Position and momentum"
+  },
+  {
+    "id": "q3",
+    "question": "What does Schrödinger’s equation describe?",
+    "options": [
+      "The evolution of a quantum system's wave function",
+      "The energy levels in classical mechanics",
+      "The expansion of the universe",
+      "The relationship between energy and mass"
+    ],
+    "answer": "The evolution of a quantum system's wave function"
+  },
+  {
+    "id": "q4",
+    "question": "Which interpretation suggests that every possible quantum outcome actually happens in a separate universe?",
+    "options": [
+      "Many-Worlds Interpretation",
+      "Copenhagen Interpretation",
+      "Pilot-Wave Theory",
+      "Quantum Collapse Theory"
+    ],
+    "answer": "Many-Worlds Interpretation"
+  },
+  {
+    "id": "q5",
+    "question": "Who proposed the idea of wave-particle duality for matter?",
+    "options": [
+      "Albert Einstein",
+      "Niels Bohr",
+      "Louis de Broglie",
+      "Erwin Schrödinger"
+    ],
+    "answer": "Louis de Broglie"
+  },
+  {
+    "id": "q6",
+    "question": "What is the mathematical object that contains all information about a quantum system?",
+    "options": [
+      "Wave function",
+      "Density matrix",
+      "Quantum operator",
+      "Spin vector"
+    ],
+    "answer": "Wave function"
+  },
+  {
+    "id": "q7",
+    "question": "In quantum entanglement, measuring one particle instantly affects the state of the other, regardless of distance. This phenomenon is called:",
+    "options": [
+      "Quantum teleportation",
+      "Spooky action at a distance",
+      "Quantum interference",
+      "Superposition"
+    ],
+    "answer": "Spooky action at a distance"
+  },
+  {
+    "id": "q8",
+    "question": "Which experiment demonstrated the wave nature of electrons?",
+    "options": [
+      "Double-slit experiment",
+      "Photoelectric effect",
+      "Compton scattering",
+      "Davisson-Germer experiment"
+    ],
+    "answer": "Davisson-Germer experiment"
+  },
+  {
+    "id": "q9",
+    "question": "Which principle states that no two electrons can occupy the same quantum state?",
+    "options": [
+      "Pauli Exclusion Principle",
+      "Heisenberg Uncertainty Principle",
+      "Superposition Principle",
+      "Correspondence Principle"
+    ],
+    "answer": "Pauli Exclusion Principle"
+  },
+  {
+    "id": "q10",
+    "question": "What is quantum tunneling?",
+    "options": [
+      "A particle passing through a potential barrier it classically couldn’t cross",
+      "Teleportation of a particle through space",
+      "A collapse of the wave function",
+      "The conversion of energy into mass"
+    ],
+    "answer": "A particle passing through a potential barrier it classically couldn’t cross"
+  }
+]
+
