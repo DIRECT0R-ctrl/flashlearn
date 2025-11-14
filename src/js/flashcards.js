@@ -42,7 +42,7 @@ createCollectionBtn.addEventListener('click', () =>
 
   card.className = `
   bg-aymane-gray border-2 border-aymane-violet
-  rounded-2xl shadow-ay-cyber p-5 w-full cursor-pointer
+  rounded-2xl shadow-ay-cyber p-5  w-full cursor-pointer
   hover:scale-105 hover:border-aymane-cyan transition-all duration-200
   flex flex-col justify-between
 `;
