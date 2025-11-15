@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cards - Flashcards</title>
   <link href="src/output.css" rel="stylesheet">
+
+  <script>
+    window.onerror = function(message, source, line, col, error) {
+      console.log('ERROR :', message);
+      console.log('FILE  :', source);
+      console.log('line  :', line + ':'' + col);
+    }
+  </script>
 </head>
 
 <body class="bg-body-bg text-aymane-text font-ay-clean min-h-screen flex flex-col items-center mb-6">
@@ -78,7 +86,7 @@
   
   <section id="collections" class="w-full max-w-4xl">
     <h2 class="text-2xl font-ay-cyber text-aymane-violet mb-6 text-center">Mes Collections</h2>
-    <div id="collections-list" class="grid gap-4"></div>
+    <div id="collections-list" class="grid gap-4 "></div>
   </section>
 
 
